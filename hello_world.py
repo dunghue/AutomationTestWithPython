@@ -20,3 +20,12 @@ for x in car:
         
     else:
         print("I like", x, "too");
+        
+username = "John123"
+def validate_username(uname) :
+    if uname == "John123":
+        print("Hello John")
+    else:
+        print("Wrong username")
+        
+validate_username(username)
