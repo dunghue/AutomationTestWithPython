@@ -20,7 +20,8 @@ for x in car:
         
     else:
         print("I like", x, "too");
-        
+
+print("LESSON 2.6")        
 username = "John123"
 def validate_username(uname) :
     if uname == "John123":
@@ -29,3 +30,4 @@ def validate_username(uname) :
         print("Wrong username")
         
 validate_username(username)
+
