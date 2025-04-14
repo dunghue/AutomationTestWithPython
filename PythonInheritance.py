@@ -18,3 +18,17 @@ class Tester(Employee):
 e = Tester(12345,"Amazon",5,"QA Automation")
 e.comp_info()
 e.tester_info()
+
+#Lesson 2.10
+print("####### Lesson 2.10. Try Except block ####")
+try:
+    x = 3
+    y = "error"
+    z = x/y
+    print("The value of z is", z)
+except SyntaxError:
+    print("received an syntax error")
+except TypeError:
+    print("received an type error")
+finally:
+    print("This is python try except example")
