@@ -17,6 +17,16 @@ firstName.send_keys("Kia")
 lastName = driver.find_element(By.ID, "id_lastName")
 lastName.send_keys("Sabrina")
 
+usernameInputField = driver.find_element(By.ID, "id_username")
+usernameInputField.send_keys("DunHue")
+
+passwordInputfield = driver.find_element(By.ID, "id_password")
+passwordInputfield.send_keys("12345")
+
+dateInputField = driver.find_element(By.ID, "id_date")
+dateInputField.send_keys("02/02/2000")
+
+
 driver.find_element(By.ID, "id_gender_1").click()
 
 #Example 3: Select a value from dropdown list
@@ -65,6 +75,10 @@ else:
     print("The title is incorrect")     
     
 print("The actual title is", actualTitle)
+
+#Example 9: Cick submit button
+submitButton = driver.find_element(By.CLASS_NAME, "submitButton").click()
+time.sleep(3)
 
 
 
