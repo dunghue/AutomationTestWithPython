@@ -49,6 +49,9 @@ if receivedText == expectedText:
 else:
     print("The text does not match")
     
+#Example 6: GET the value from the First Name field 
 
+valueOfFirstName = firstName.get_attribute("value")
+print("The first name is:", valueOfFirstName)
 
 
