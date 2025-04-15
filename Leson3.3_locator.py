@@ -29,3 +29,26 @@ state.select_by_visible_text("Texas")
 fee = Select(driver.find_element(By.ID, "id_fee"))
 fee.select_by_visible_text("$150 : Gold")
 time.sleep(3)
+
+#Example 4: Deal with any alert window (pop up)
+button = driver.find_element(By.ID, "js_button")
+print("Is Button enabled", button.is_enabled())
+      #is_enabled(): method returns True if the button is enabled, otherwise False.
+button.click()
+time.sleep(2)
+
+alert = driver.switch_to.alert #switch_to.alert: method is used to switch the control to alert window.
+alert.accept() #accept(): method is used to accept the alert.(click OK button)
+time.sleep(2)
+
+#Example 5: check the paragraph text matches with the expected text
+receivedText = driver.find_element(By.XPATH, "//p[contains(., 'Home Food Delivery Service')]").text
+expectedText = "Greetings, Please fill the form below to get enrolled into the World's Best Home Food Delivery Service"
+if receivedText == expectedText:
+    print("Test Passed")
+else:
+    print("The text does not match")
+    
+
+
+
