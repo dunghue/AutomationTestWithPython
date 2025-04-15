@@ -64,6 +64,8 @@ else:
 valueOfFirstName = firstName.get_attribute("value")
 print("The first name is:", valueOfFirstName)
 
+valueOfUserName = usernameInputField.get_attribute("value")
+
 #Example 7: Get URL and title of the page
 print("The url is", driver.current_url)
 
@@ -78,7 +80,16 @@ print("The actual title is", actualTitle)
 
 #Example 9: Cick submit button
 submitButton = driver.find_element(By.CLASS_NAME, "submitButton").click()
-time.sleep(3)
+time.sleep(2)
+
+#Verify the displayed username
+displayedUserName = driver.find_element(By.XPATH, "//tr[2]/td[2]").text
+if (valueOfUserName == displayedUserName):
+    print("Test Passed")
+else:
+    print("Test Failed")
+
+
 
 
 
