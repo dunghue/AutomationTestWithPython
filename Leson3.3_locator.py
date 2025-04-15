@@ -54,4 +54,17 @@ else:
 valueOfFirstName = firstName.get_attribute("value")
 print("The first name is:", valueOfFirstName)
 
+#Example 7: Get URL and title of the page
+print("The url is", driver.current_url)
+
+expectedTitle = "Tasty Home Food Delivery Service"
+actualTitle = driver.title
+if(actualTitle == expectedTitle):
+    print("The title is correct")
+else:
+    print("The title is incorrect")     
+    
+print("The actual title is", actualTitle)
+
+
 
