@@ -1,3 +1,4 @@
+import HtmlTestRunner
 import unittest
 from selenium import webdriver
 import homePage
@@ -24,7 +25,7 @@ class Testing_HomePage(unittest.TestCase):
         
         
 if __name__ == "__main__":
-    unittest.main()
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='D:\PythonForBeginer'))
 
         
 
